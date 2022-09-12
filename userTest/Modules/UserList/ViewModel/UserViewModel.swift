@@ -1,8 +1,12 @@
 //
-//  BaseService.swift
+//  UserViewModel.swift
 //  userTest
 //
 //  Created by Yazmin Carmona on 11/09/22.
 //
 
 import Foundation
+
+class UserViewModel {
+    
+}

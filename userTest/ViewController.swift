@@ -9,8 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    private var viewModel: UserViewModel = UserViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.retriveDataList()
         // Do any additional setup after loading the view.
     }
 
