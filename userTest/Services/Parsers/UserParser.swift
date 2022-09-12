@@ -16,6 +16,7 @@ class UserParser {
                     user.userName = userModel.username
                     user.email = userModel.email
                     user.website = userModel.website
+                    user.phone = userModel.phone
                     DataBaseManager.shared().saveContext()
                 }
             }

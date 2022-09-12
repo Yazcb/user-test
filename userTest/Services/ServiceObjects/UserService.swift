@@ -33,6 +33,30 @@ class UserService: BaseServiceObject, ServiceManagerDelegate {
         serviceManager.request(urlService: url, completionHandler: completion)
     }
     
+    func getLocalList(text: String = "", completion: @escaping([User]?) -> Void) {
+        DispatchQueue.main.async {
+            if text.isEmpty {
+                self.getAllUser(completion: completion)
+            } else {
+                self.getFilteredUser(name: text, completion: completion)
+            }
+            
+        }
+    }
+    
+    private func getFilteredUser(name: String = "", completion: @escaping([User]?) -> Void) {
+        DataBaseManager.shared().managedObjectContext.perform {
+            let list = (try! DataBaseManager.shared().fetchRequestFrom(entityName: User.name(), predicate: NSPredicate(format: " name contains[c] %@", name))) as? [User]
+            completion(list)
+        }
+    }
+    
+    private func getAllUser(completion: @escaping([User]?) -> Void) {
+        DataBaseManager.shared().managedObjectContext.perform {
+            let list = (try! DataBaseManager.shared().fetchRequestFrom(entityName: User.name())) as? [User]
+            completion(list)
+        }
+    }
     
     func processFailWithError(code: Int, error: String) {
         
