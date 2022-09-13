@@ -14,6 +14,15 @@
 		4E3A7C1428CEF7DA000A5F9D /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3A7C1328CEF7DA000A5F9D /* ViewExtension.swift */; };
 		4E4DBB2C28CF8AA20098F014 /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4DBB2B28CF8AA20098F014 /* TableViewExtension.swift */; };
 		4E4DBB2E28CF95BA0098F014 /* LiveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4DBB2D28CF95BA0098F014 /* LiveData.swift */; };
+		4E4DBB3028CF98A90098F014 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4DBB2F28CF98A90098F014 /* PostViewController.swift */; };
+		4E4DBB3228CF98B60098F014 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4DBB3128CF98B60098F014 /* PostViewModel.swift */; };
+		4E4DBB3428CF99240098F014 /* PostParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4DBB3328CF99240098F014 /* PostParser.swift */; };
+		4E4DBB3628CF99470098F014 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4DBB3528CF99470098F014 /* PostService.swift */; };
+		4E4DBB3828CF9BB70098F014 /* UserInfoCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E4DBB3728CF9BB70098F014 /* UserInfoCustomView.xib */; };
+		4E4DBB3A28CF9D110098F014 /* UserInfoCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4DBB3928CF9D110098F014 /* UserInfoCustomView.swift */; };
+		4E4DBB3D28CFAEE20098F014 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4DBB3C28CFAEE20098F014 /* PostTableViewCell.swift */; };
+		4E4DBB3F28CFAEF20098F014 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E4DBB3E28CFAEF20098F014 /* PostTableViewCell.xib */; };
+		4E4DBB4128D003610098F014 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4DBB4028D003610098F014 /* UIAlertControllerExtension.swift */; };
 		4E8C83D728CE92AE00896290 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4E8C83D628CE92AE00896290 /* Alamofire */; };
 		4E8C83D928CE932D00896290 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8C83D828CE932D00896290 /* UserModel.swift */; };
 		4E8C83DB28CE935D00896290 /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8C83DA28CE935D00896290 /* AddressModel.swift */; };
@@ -62,6 +71,15 @@
 		4E3A7C1328CEF7DA000A5F9D /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		4E4DBB2B28CF8AA20098F014 /* TableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
 		4E4DBB2D28CF95BA0098F014 /* LiveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveData.swift; sourceTree = "<group>"; };
+		4E4DBB2F28CF98A90098F014 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		4E4DBB3128CF98B60098F014 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		4E4DBB3328CF99240098F014 /* PostParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostParser.swift; sourceTree = "<group>"; };
+		4E4DBB3528CF99470098F014 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		4E4DBB3728CF9BB70098F014 /* UserInfoCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoCustomView.xib; sourceTree = "<group>"; };
+		4E4DBB3928CF9D110098F014 /* UserInfoCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoCustomView.swift; sourceTree = "<group>"; };
+		4E4DBB3C28CFAEE20098F014 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		4E4DBB3E28CFAEF20098F014 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		4E4DBB4028D003610098F014 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 		4E8C83D828CE932D00896290 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		4E8C83DA28CE935D00896290 /* AddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
 		4E8C83DC28CE937B00896290 /* GeoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoModel.swift; sourceTree = "<group>"; };
@@ -121,8 +139,18 @@
 			children = (
 				4E3A7C1328CEF7DA000A5F9D /* ViewExtension.swift */,
 				4E4DBB2B28CF8AA20098F014 /* TableViewExtension.swift */,
+				4E4DBB4028D003610098F014 /* UIAlertControllerExtension.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4E4DBB3B28CFAED20098F014 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4E4DBB3C28CFAEE20098F014 /* PostTableViewCell.swift */,
+				4E4DBB3E28CFAEF20098F014 /* PostTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		4EBF566128CE85E500FA0434 = {
@@ -243,6 +271,7 @@
 		4EBF56B128CE89C600FA0434 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				4E4DBB3128CF98B60098F014 /* PostViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -250,6 +279,8 @@
 		4EBF56B228CE89CE00FA0434 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4E4DBB3B28CFAED20098F014 /* Cell */,
+				4E4DBB2F28CF98A90098F014 /* PostViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -276,6 +307,8 @@
 			children = (
 				4E3A7C0E28CED213000A5F9D /* UserTableViewCell.xib */,
 				4E3A7C1028CEF6E3000A5F9D /* UserTableViewCell.swift */,
+				4E4DBB3728CF9BB70098F014 /* UserInfoCustomView.xib */,
+				4E4DBB3928CF9D110098F014 /* UserInfoCustomView.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -333,6 +366,7 @@
 			children = (
 				4EBF56C128CE8E9800FA0434 /* BaseService.swift */,
 				4E8C83EB28CEA57E00896290 /* UserService.swift */,
+				4E4DBB3528CF99470098F014 /* PostService.swift */,
 			);
 			path = ServiceObjects;
 			sourceTree = "<group>";
@@ -341,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				4E8C83EF28CEBEE000896290 /* UserParser.swift */,
+				4E4DBB3328CF99240098F014 /* PostParser.swift */,
 			);
 			path = Parsers;
 			sourceTree = "<group>";
@@ -457,8 +492,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E4DBB3828CF9BB70098F014 /* UserInfoCustomView.xib in Resources */,
 				4E3A7C0F28CED213000A5F9D /* UserTableViewCell.xib in Resources */,
 				4EBF567D28CE85E600FA0434 /* LaunchScreen.storyboard in Resources */,
+				4E4DBB3F28CFAEF20098F014 /* PostTableViewCell.xib in Resources */,
 				4EBF567A28CE85E600FA0434 /* Assets.xcassets in Resources */,
 				4EBF567528CE85E500FA0434 /* Main.storyboard in Resources */,
 			);
@@ -492,16 +529,23 @@
 				4EBF56AC28CE896000FA0434 /* ManagedObjectExtension.swift in Sources */,
 				4E8C83DB28CE935D00896290 /* AddressModel.swift in Sources */,
 				4E8C83DD28CE937B00896290 /* GeoModel.swift in Sources */,
+				4E4DBB3428CF99240098F014 /* PostParser.swift in Sources */,
 				4E4DBB2E28CF95BA0098F014 /* LiveData.swift in Sources */,
 				4EBF567828CE85E500FA0434 /* userTest.xcdatamodeld in Sources */,
+				4E4DBB3028CF98A90098F014 /* PostViewController.swift in Sources */,
 				4E3A7C0D28CECBD8000A5F9D /* SceneDelegate.swift in Sources */,
 				4E8C83E328CE93FF00896290 /* PostModel.swift in Sources */,
 				4EBF567228CE85E500FA0434 /* ViewController.swift in Sources */,
 				4E8C83F428CEC1C800896290 /* UserViewModel.swift in Sources */,
+				4E4DBB3D28CFAEE20098F014 /* PostTableViewCell.swift in Sources */,
+				4E4DBB3A28CF9D110098F014 /* UserInfoCustomView.swift in Sources */,
 				4EBF566E28CE85E500FA0434 /* AppDelegate.swift in Sources */,
 				4EBF56C028CE8E8700FA0434 /* ServiceManager.swift in Sources */,
 				4E8C83D928CE932D00896290 /* UserModel.swift in Sources */,
 				4E3A7C1128CEF6E3000A5F9D /* UserTableViewCell.swift in Sources */,
+				4E4DBB3628CF99470098F014 /* PostService.swift in Sources */,
+				4E4DBB3228CF98B60098F014 /* PostViewModel.swift in Sources */,
+				4E4DBB4128D003610098F014 /* UIAlertControllerExtension.swift in Sources */,
 				4EBF56A228CE879100FA0434 /* DataBaseManager.swift in Sources */,
 				4E4DBB2C28CF8AA20098F014 /* TableViewExtension.swift in Sources */,
 				4E8C83E028CE93A500896290 /* CompanyModel.swift in Sources */,

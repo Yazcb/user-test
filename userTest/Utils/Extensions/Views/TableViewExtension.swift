@@ -24,10 +24,6 @@ extension UITableView {
     }
     
     func removeEmptyMessage() {
-        for subview in self.subviews as [UIView] {
-            if let foundView = subview.viewWithTag(TAG_EMPTY_LABEL) {
-                foundView.removeFromSuperview()
-            }
-        }
+        self.backgroundView = UIView(frame: CGRect.zero)
     }
 }

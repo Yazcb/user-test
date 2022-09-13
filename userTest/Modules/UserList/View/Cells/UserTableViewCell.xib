@@ -118,7 +118,7 @@
         <image name="mail.fill" catalog="system" width="128" height="93"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
         <namedColor name="AccentColor">
-            <color red="0.20399998128414154" green="0.61795705556869507" blue="0.34899997711181641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20399998128414154" green="0.61799997091293335" blue="0.34899997711181641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

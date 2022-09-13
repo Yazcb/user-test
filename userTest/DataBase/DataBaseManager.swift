@@ -71,7 +71,7 @@ class DataBaseManager {
     
     func fetchRequestFrom(entityName:String, predicate:NSPredicate, context:NSManagedObjectContext) throws ->[Any] {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>.init(entityName: entityName)
-        fetchRequest.includesSubentities = false
+        fetchRequest.includesSubentities = true
         fetchRequest.predicate = predicate
         return try context.fetch(fetchRequest)
     }

@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     private var viewModel: UserViewModel = UserViewModel()
+    private var  selectedUser: Int64 = -1
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -18,6 +19,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        DispatchQueue.main.async {
+            let alert = UIAlertController.alertActivityIndicator(message: "Por favor espera un momento", title: "Obteniendo usuarios")
+            self.present(alert, animated: true)
+        }
         viewModel.retriveDataList()
         // Do any additional setup after loading the view.
         searchBar.delegate = self
@@ -36,9 +41,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             return UITableViewCell()
         }
 
-//        let cell = UITableViewCell()
-//        cell.backgroundColor = .red
-
         let user = self.viewModel.userList[indexPath.row]
         cell.bind(model: user) {
             self.showPosts(userId: user.id)
@@ -50,9 +52,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return UITableView.automaticDimension
     }
     
-    func showPosts(userId: Int16)  {
+    func showPosts(userId: Int64)  {
+        self.selectedUser = userId
+        self.performSegue(withIdentifier: "ShowPostView", sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "ShowPostView") {
+            let postView = segue.destination as! PostViewController
+            postView.userId = selectedUser
+        }
+    }
 }
 
 
@@ -65,12 +75,13 @@ extension ViewController: UISearchBarDelegate {
 extension ViewController {
     func subcribe() {
         self.viewModel.isDataFiltered.bind { value in
-            self.tableView.reloadData()
+            self.dismiss(animated: true)
             if self.viewModel.userList.count == 0 {
                 self.tableView.setEmptyMessage("List is empty")
             } else {
                 self.tableView.removeEmptyMessage()
             }
+            self.tableView.reloadData()
         }
     }
 }

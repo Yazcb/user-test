@@ -7,16 +7,21 @@
 import Foundation
 import Alamofire
 
-class BaseServiceObject {
-    
+protocol BaseServiceObjectDelegate {
+    func processFailWithError(code: Int, error: String)
+}
+
+class BaseServiceObject: ServiceManagerDelegate {
     enum Server {
         case development, production
     }
    
     internal var serverToUse = Server.development
-    
-    var pathUrlService: String
+    let serviceManager = ServiceManager.shared()
 
+    var pathUrlService: String
+    var delegate: BaseServiceObjectDelegate?
+    
     internal init() {
     #if development
         serverToUse = .development
@@ -29,6 +34,7 @@ class BaseServiceObject {
         case .production:
             self.pathUrlService =  "https://jsonplaceholder.typicode.com/"
         }
+        serviceManager.delegate = self
     }
     
     enum ServicesUrl: String {
@@ -44,4 +50,11 @@ class BaseServiceObject {
             }
         }
     }
+    
+    func processFailWithError(code: Int, error: String) {
+        self.delegate?.processFailWithError(code: code, error: error)
+    }
+    
+    
+
 }

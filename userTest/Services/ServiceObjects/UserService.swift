@@ -8,13 +8,10 @@
 import Foundation
 
 
-class UserService: BaseServiceObject, ServiceManagerDelegate {
+class UserService: BaseServiceObject {
 
-    let serviceManager = ServiceManager.shared()
-    
     override init() {
         super.init()
-        serviceManager.delegate = self
     }
     
     
@@ -34,13 +31,10 @@ class UserService: BaseServiceObject, ServiceManagerDelegate {
     }
     
     func getLocalList(text: String = "", completion: @escaping([User]?) -> Void) {
-        DispatchQueue.main.async {
-            if text.isEmpty {
-                self.getAllUser(completion: completion)
-            } else {
-                self.getFilteredUser(name: text, completion: completion)
-            }
-            
+        if text.isEmpty {
+            self.getAllUser(completion: completion)
+        } else {
+            self.getFilteredUser(name: text, completion: completion)
         }
     }
     
@@ -58,8 +52,9 @@ class UserService: BaseServiceObject, ServiceManagerDelegate {
         }
     }
     
-    func processFailWithError(code: Int, error: String) {
-        
+    func getUser(userId: Int64, completion: @escaping(User?) -> Void) {
+        let list = (try! DataBaseManager.shared().fetchRequestFrom(entityName: User.name(), predicate: NSPredicate(format: "id == %@", NSNumber(value: userId)))).first as? User
+        completion(list)
     }
     
 }

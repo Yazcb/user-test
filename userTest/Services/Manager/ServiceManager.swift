@@ -42,7 +42,6 @@ class ServiceManager {
             switch response.result {
             case .success(let data):
                 completionHandler(data)
-                print(data)
             case .failure(let error):
                 self.delegate?.processFailWithError(code: response.response?.statusCode ?? -1, error: error.errorDescription ?? "")
             }
@@ -50,7 +49,6 @@ class ServiceManager {
     }
     
     func requestWithParams<T:Codable>(urlService: String, parameters: Parameters, completionHandler: @escaping(T?) -> Void) {
-        
         self.manager.request(urlService, parameters: parameters).validate().responseDecodable(of: T.self) {
             (response) in
             switch response.result {

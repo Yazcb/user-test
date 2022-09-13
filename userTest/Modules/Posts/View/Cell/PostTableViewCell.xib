@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PostTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="145" id="Kjo-7p-frF" customClass="PostTableViewCell" customModule="userTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="513" height="145"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kjo-7p-frF" id="bEd-bs-mLH">
+                <rect key="frame" x="0.0" y="0.0" width="513" height="145"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="AGA-dO-W0i">
+                        <rect key="frame" x="12" y="12" width="489" height="121"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7FU-fg-H0w">
+                                <rect key="frame" x="0.0" y="0.0" width="489" height="17"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0i-il-0Rh">
+                                <rect key="frame" x="0.0" y="29" width="489" height="92"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="AGA-dO-W0i" firstAttribute="leading" secondItem="bEd-bs-mLH" secondAttribute="leading" constant="12" id="5sB-ja-nD6"/>
+                    <constraint firstAttribute="bottom" secondItem="AGA-dO-W0i" secondAttribute="bottom" constant="12" id="Ldz-zh-mJb"/>
+                    <constraint firstItem="AGA-dO-W0i" firstAttribute="top" secondItem="bEd-bs-mLH" secondAttribute="top" constant="12" id="XuS-N1-uEo"/>
+                    <constraint firstAttribute="trailing" secondItem="AGA-dO-W0i" secondAttribute="trailing" constant="12" id="uoM-oQ-Kuc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lblBody" destination="b0i-il-0Rh" id="KFf-tz-eJ1"/>
+                <outlet property="lblTitle" destination="7FU-fg-H0w" id="iIT-qQ-dtm"/>
+            </connections>
+            <point key="canvasLocation" x="174.63768115942031" y="77.34375"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.20399998128414154" green="0.61799997091293335" blue="0.34899997711181641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

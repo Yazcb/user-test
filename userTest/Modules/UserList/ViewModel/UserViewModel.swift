@@ -8,12 +8,16 @@
 import Foundation
 import UIKit
 
-class UserViewModel {
-    
+class UserViewModel: BaseServiceObjectDelegate {
+
     lazy var isDataFiltered: LiveData<Bool> = LiveData(false)
+    
     var userList: [User] = []
     var userService = UserService()
     
+    init() {
+        userService.delegate = self
+    }
 
     func retriveDataList() {
         userService.downloadList {
@@ -31,4 +35,10 @@ class UserViewModel {
             }
         }
     }
+    
+    func processFailWithError(code: Int, error: String) {
+        print(error.description)
+    }
+    
+    
 }
